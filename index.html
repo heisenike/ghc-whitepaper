@@ -1,97 +1,137 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GHC白皮书 - Chandler代币</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GHC白皮书 | AI Health Foundation</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
+    :root {
+      --bg: #0e0e0e;
+      --fg: #ffffff;
+      --accent: #29b6f6;
+      --max-w: 960px;
+      --pad: 3.5rem;
     }
-    h1, h2, h3 {
-      color: #000;
-    }
-    a {
-      color: #0056b3;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      color: #888;
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial }
+    body { background: var(--bg); color: var(--fg); line-height: 1.6; scroll-behavior: smooth; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 1rem var(--pad); }
+    header img { width: 100px; height: 100px; }
+    nav a { color: var(--fg); margin-left: 1.5rem; text-decoration: none; font-size: .95rem; }
+    nav a:hover { color: var(--accent); }
+    .lang-btn { background: var(--accent); border: none; color: #fff; border-radius: 4px; padding: .3rem .6rem; cursor: pointer; margin-left: 1.5rem; }
+    section { padding: var(--pad) 1rem; max-width: var(--max-w); margin: auto; text-align: center; }
+    h1, h2 { margin-bottom: 1rem; font-weight: 600; }
+    h1 { font-size: 2.5rem; }
+    p { max-width: 680px; margin: .5rem auto 1.2rem; }
+    .btn { display: inline-block; background: var(--accent); color: #fff; padding: .6rem 1.4rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; }
+    /* 简单响应导航 */
+    @media (max-width: 680px) {
+      nav { display: none; }
+      header { flex-direction: column; }
+      .lang-btn { margin: 1rem 0 0; }
     }
   </style>
 </head>
 <body>
+  <!-- 顶部导航 -->
   <header>
-    <h1>GHC 白皮书</h1>
-    <p><strong>Chandler · AI 健康基金会 · 抗疾病数字代币</strong></p>
-    <p>合约地址：TAjPYaai21hpt6cxrAbiDcyAPwYSMXNAVq</p>
+    <a href="#home"><img src="logo.jpg" alt="GHC Logo" /></a>
+    <nav id="nav">
+      <a href="#home" data-i18n="navHome">首页</a>
+      <a href="#about" data-i18n="navAbout">关于我们</a>
+      <a href="#project" data-i18n="navProject">项目介绍</a>
+      <a href="#contact" data-i18n="navContact">联系我们</a>
+    </nav>
+    <button class="lang-btn" id="switchLang">EN</button>
   </header>
 
-  <h2>一、项目简介</h2>
-  <p>
-    GHC（Global Health Coin，中文名：全球健康币），是由 Chandler 团队发起的一款基于 TRON 主网发行的 TRC20 标准代币，旨在构建一个以 AI 驱动的抗疾病生态系统，汇聚全球币圈力量，共同推动医疗科技和健康事业的发展。
-  </p>
+  <!-- 首页 -->
+  <section id="home">
+    <h1 data-i18n="heroTitle">赋能健康的 GHC AI 基金</h1>
+    <p data-i18n="heroSubtitle">
+      基于 TRON 网络的 TRC20 代币，为全球健康与疾病预防的 AI 研究提供支持。通过去中心化的区块链技术，我们能最大化地保证透明度和公正性，让每个投资者都能受益。GHC项目不仅是一个投资机会，更是一场全球健康领域的革命。
+    </p>
+    <p>
+      在全球健康产业中，数据的价值和应用成为了突破性的关键。GHC 代币作为桥梁，连接了全球用户、医疗机构、AI 研发团队，所有的数据和行动都将在去中心化的环境中进行。这意味着，您将成为全球健康数据变革的见证者和推动者，早期的投资者将享有优厚的回报。
+    </p>
+    <a href="#project" class="btn" data-i18n="heroBtn">了解更多</a>
+  </section>
 
-  <h2>二、愿景与使命</h2>
-  <ul>
-    <li>支持全球 AI 医疗与抗疾病科研项目</li>
-    <li>促进加密世界对健康公益的参与与支持</li>
-    <li>推动健康数据与 AI 结合，提升全球健康水平</li>
-  </ul>
+  <!-- 关于我们 -->
+  <section id="about">
+    <h2 data-i18n="aboutTitle">关于我们</h2>
+    <p data-i18n="aboutTxt">
+      Chandler (GHC) 致力于搭建连接区块链与医疗健康的去中心化生态，为 AI 研究与公益基金会提供可持续资金。通过 GHC 代币，全球用户能够直接参与到健康领域的智能化革命中，最终实现健康预防、疾病管理与医疗服务的全方位提升。
+    </p>
+    <p>
+      **宝二爷**有一个信念：“未来的财富属于敢于行动的人。”我们正处于全球医疗健康产业革新的重要时刻，GHC 代币的发行为所有愿意抓住机会的投资者提供了一个独特的机会。宝二爷的理念是，“先上车的吃肉”，这是一次属于先知的革命，你准备好了吗？
+    </p>
+    <p>
+      通过 GHC 项目，我们不只是要推向市场一个虚拟货币，更是要打造一个能实际改善全球医疗健康的巨大生态系统。从 AI 智能健康数据分析到去中心化的医疗资源分配，我们正在为全人类的健康事业做出贡献，且这一切是通过 GHC 代币的价值来实现的。
+    </p>
+  </section>
 
-  <h2>三、代币信息</h2>
-  <ul>
-    <li>名称：Chandler</li>
-    <li>符号：GHC</li>
-    <li>标准：TRC20</li>
-    <li>总供应量：21,000,000 枚</li>
-    <li>小数位数：6</li>
-    <li>区块链平台：TRON 主网</li>
-    <li>合约地址：TAjPYaai21hpt6cxrAbiDcyAPwYSMXNAVq</li>
-  </ul>
+  <!-- 项目介绍 -->
+  <section id="project">
+    <h2 data-i18n="projTitle">项目介绍</h2>
+    <p data-i18n="projTxt">
+      GHC 代币的总供应量为 21,000,000 枚，其中团队和社区共同治理，确保项目的透明性和公正性。我们的目标是通过推动全球 AI 健康数据平台的建设，让世界各地的人们都能在没有中介的情况下共享、使用健康数据。
+    </p>
+    <ul>
+      <li><strong>全球健康数据共享平台</strong>：创建去中心化的数据存储和共享机制，让全球健康数据得到更加广泛的利用。</li>
+      <li><strong>人工智能健康管理平台</strong>：利用 AI 技术分析健康数据，为用户提供个性化的健康管理方案，减少疾病发生。</li>
+      <li><strong>去中心化医疗资源分配系统</strong>：借助区块链技术优化医疗资源的分配，让全球医疗服务更加公平透明。</li>
+      <li><strong>全球抗疾病基金</strong>：通过 GHC 代币的流通，筹集资金支持全球疾病预防与健康促进研究。</li>
+    </ul>
+  </section>
 
-  <h2>四、代币分配</h2>
-  <ul>
-    <li>60%：市场流通和交易所上线</li>
-    <li>20%：AI 健康基金会（用于科研资助）</li>
-    <li>10%：抗疾病专项基金</li>
-    <li>10%：团队和顾问激励（分期释放）</li>
-  </ul>
+  <!-- 联系我们 -->
+  <section id="contact">
+    <h2 data-i18n="contactTitle">联系我们</h2>
+    <p>
+      **宝二爷**一直坚信，“财富是属于敢于行动的人的！”想加入我们，成为 GHC 生态的一部分吗？不要犹豫，点击以下链接立即加入我们的 Telegram 群组，开始您的健康投资之旅！
+    </p>
+    <p>Telegram：<a href="https://t.me/GuoChandler1984" target="_blank">@GuoChandler1984</a></p>
+    <p>Email：chandlerguo1984@outlook.com</p>
+    <p>加入我们：<a href="https://t.me/+eaau55TfyjBmNWE1" target="_blank">点击这里加入Telegram群组，成为GHC的一部分</a></p>
+  </section>
 
-  <h2>五、应用场景</h2>
-  <ol>
-    <li>全球 AI 医疗研究资助：GHC 可用于支持健康科技项目、疾病预测平台等。</li>
-    <li>社区奖励：为贡献者和传播者提供代币奖励，激励健康知识传播。</li>
-    <li>交易与投资：可在 TRON 去中心化交易所如 SunSwap 上交易。</li>
-    <li>DAO 治理：代币持有者可参与项目重大决策。</li>
-  </ol>
+  <script>
+    /* 简易多语言切换 */
+    const zh = {
+      navHome: "首页", navAbout: "关于我们", navProject: "项目介绍", navContact: "联系我们",
+      heroTitle: "赋能健康的 GHC AI 基金",
+      heroSubtitle: "基于 TRON 网络的 TRC20 代币，为全球健康与疾病预防的 AI 研究提供支持。",
+      heroBtn: "了解更多",
+      aboutTitle: "关于我们",
+      aboutTxt: "Chandler (GHC) 致力于搭建连接区块链与医疗健康的去中心化生态，为 AI 研究与公益基金会提供可持续资金。",
+      projTitle: "项目介绍",
+      projTxt: "代币总供应 21,000,000 枚，团队与社区共同治理，透明公开。未来将推出质押、募捐与 AI 健康数据平台。",
+      contactTitle: "联系我们"
+    }
 
-  <h2>六、路线图</h2>
-  <ul>
-    <li><strong>2025 Q2：</strong>完成主网部署，上线 GitHub 官方网站</li>
-    <li><strong>2025 Q3：</strong>SunSwap 上架，建立健康基金会 DAO 结构</li>
-    <li><strong>2025 Q4：</strong>开展全球 AI 健康挑战赛，与科研机构合作</li>
-    <li><strong>2026 年：</strong>实现全球健康数据上链，构建 AI 健康生态闭环</li>
-  </ul>
+    const en = {
+      navHome: "Home", navAbout: "About", navProject: "Project", navContact: "Contact",
+      heroTitle: "GHC AI Health Foundation",
+      heroSubtitle: "A TRC20 token on TRON empowering global AI research in health & disease prevention.",
+      heroBtn: "Learn More",
+      aboutTitle: "About Us",
+      aboutTxt: "Chandler (GHC) is building a decentralized ecosystem bridging blockchain & healthcare to fund AI research and charity foundations.",
+      projTitle: "Project Overview",
+      projTxt: "21,000,000 total supply. Community-governed and transparent. Staking, fundraising & AI data platform coming soon.",
+      contactTitle: "Contact Us"
+    }
 
-  <h2>七、联系方式</h2>
-  <p>
-    官方网站：<a href="https://heisenike.github.io/ghc-website" target="_blank">https://heisenike.github.io/ghc-website</a><br />
-    官方 Telegram：<a href="https://t.me/GuoChandler1984" target="_blank">@GuoChandler1984</a>
-  </p>
-
-  <footer>
-    <p>© 2025 Chandler GHC · AI 健康基金会 · 代币即公益，区块链即信任</p>
-  </footer>
+    let current = "zh";
+    const switchBtn = document.getElementById("switchLang");
+    switchBtn.onclick = () => {
+      current = current === "zh" ? "en" : "zh";
+      switchBtn.textContent = current === "zh" ? "EN" : "中文";
+      const dict = current === "zh" ? zh : en;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.innerHTML = dict[el.dataset.i18n] || el.innerHTML;
+      });
+    };
+  </script>
 </body>
 </html>
